@@ -1,10 +1,5 @@
 ﻿Console.WriteLine("******************************************");
 
-// Vstup počáteční hodnoty - špatně řešený
-    Console.Write("Zadejte první číslo řady: ");
-    int first = int.Parse(Console.ReadLine()); 
-    // Console.Write("Zadejte první číslo řady: ");
-    // int first = int.Parse(Console.ReadLine());
 
     // Vstup počáteční hodnoty - správně řešený
     Console.Write("Zadejte první číslo řady (celé číslo): ");
@@ -29,6 +24,15 @@
     {
         Console.Write("Diference musí být kladné celé číslo! Zadejte diferenci znovu (kladné celé číslo): ");
     }
-
+    //Rekapitulace zadaných hodnot /*
+    //Console.WriteLine();
+    //Console.WriteLine("***************************");
+    //Console.WriteLine($"První číslo: {first}");
+    //Console.WriteLine($"Poslední čílo: {last}");
+    //Console.WriteLine($"Zadaná diference: {step}");1
+    //Console.WriteLine("***************************");
+    
+    //Výpis zadaných hodnot do jednoho řádku
+    Console.WriteLine($"První číslo: {first};  Poslední číslo {last}; Diference (krok): {step}");
 
 // Dotaz směrem k uživateli na opakování
