@@ -1,5 +1,4 @@
-﻿
-// jako první si připravíme smyčku pro opakování programu
+﻿Console.WriteLine("******************************************");
 
 Console.Clear();
 string again = "a";
