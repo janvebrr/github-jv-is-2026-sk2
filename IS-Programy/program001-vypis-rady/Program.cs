@@ -18,9 +18,32 @@ while(again.ToLower() == "a" )
     Console.WriteLine("******************************************");
 
     // Vstup počáteční hodnoty - špatně řešený
-    Console.Write("Zadejte první číslo řady: ");
-    int first = int.Parse(Console.ReadLine()); 
+    // Console.Write("Zadejte první číslo řady: ");
+    // int first = int.Parse(Console.ReadLine()); 
 
+    // Vstup první hodnoty
+    Console.Write("Zadejte první číslo řady (celé číslo): ");
+    int first;
+    while(!int.TryParse(Console.ReadLine(), out first))
+    {
+        Console.Write("Nezadali jste celé číslo! Zadejte první číslo řady znovu (celé číslo): ");
+    }
+
+    // Vstup poslední hodnoty
+    Console.Write("Zadejte poslední číslo řady (celé číslo): ");
+    int last;
+    while(!int.TryParse(Console.ReadLine(), out last))
+    {
+        Console.Write("Nezadali jste celé číslo! Zadejte poslední číslo řady znovu (celé číslo): ");
+    }
+
+    // Vstup diference s kontrolou
+    Console.Write("Zadejte diferenci (kladné celé číslo): ");
+    int step;
+    while(!int.TryParse(Console.ReadLine(), out step) || step <= 0 )
+    {
+        Console.Write("Diference musí být kladné celé číslo! Zadejte diferenci znovu (kladné celé číslo): ");
+    }
 
     // Opakovací dotaz
     Console.WriteLine();
