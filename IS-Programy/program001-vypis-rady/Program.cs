@@ -45,6 +45,29 @@ while(again.ToLower() == "a" )
         Console.Write("Diference musí být kladné celé číslo! Zadejte diferenci znovu (kladné celé číslo): ");
     }
 
+
+    // Jádro algortimu pro výpis řady
+    Console.WriteLine("Výpis číselné řady: ");
+
+    if(first <= last)
+    {
+        int current = first;
+        while(current <= last) {
+            Console.WriteLine(current);
+            
+            // Console.Write($"{current}; ");
+            
+            // current = current + step;
+            current += step;
+        }
+    }
+    else
+    {
+        Console.WriteLine("Nelze vypsat řadu!");
+        Console.WriteLine("První číslo je větší než poslední.");
+        Console.WriteLine("Tento program umí vypsat pouze vzestupnou řadu ");
+    }
+
     // Opakovací dotaz
     Console.WriteLine();
     Console.WriteLine();
