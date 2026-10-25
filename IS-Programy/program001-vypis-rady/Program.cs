@@ -17,6 +17,11 @@ while(again.ToLower() == "a" )
     Console.WriteLine("******************************************");
     Console.WriteLine("******************************************");
 
+    // Vstup počáteční hodnoty - špatně řešený
+    Console.Write("Zadejte první číslo řady: ");
+    int first = int.Parse(Console.ReadLine()); 
+
+
     // Opakovací dotaz
     Console.WriteLine();
     Console.WriteLine();
