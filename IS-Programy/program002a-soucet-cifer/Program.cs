@@ -34,6 +34,7 @@ while(again.ToLower() == "a" )
     int zaloha = cislo;
     int suma = 0;
     int cifra;
+    int soucin = 1;
 
     if (cislo < 0)
     {
@@ -43,6 +44,7 @@ while(again.ToLower() == "a" )
     if (cislo == 0)
     {
         suma = 0;
+        soucin = 0;
     }
     else
     {
@@ -53,7 +55,8 @@ while(again.ToLower() == "a" )
         while (cislo > 0)
         {
             cifra = cislo % 10;            
-            suma = suma + cifra;              
+            suma = suma + cifra; 
+            soucin = soucin * cifra;             
             cislo = cislo / 10;           
         }
     }
@@ -62,7 +65,7 @@ while(again.ToLower() == "a" )
     
     Console.WriteLine();
     Console.WriteLine("====================================");
-    Console.WriteLine($"Původní číslo:  {zaloha} a Ciferný součet: {suma}");
+    Console.WriteLine($"Původní číslo:  {zaloha}, ciferný součet: {suma} a součin {soucin} ");
     Console.WriteLine("====================================");
     Console.WriteLine();
 
