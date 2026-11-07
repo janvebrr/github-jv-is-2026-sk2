@@ -11,7 +11,6 @@ while (again.ToLower() == "a")
     Console.WriteLine("************** Jan Vébr **********************");
     Console.WriteLine("**********************************************");
 
-    // Vstup hodnoty
     Console.Write("Zadejte celé číslo: ");
     int cislo;
     while (!int.TryParse(Console.ReadLine(), out cislo))
