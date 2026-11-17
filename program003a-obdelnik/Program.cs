@@ -6,7 +6,7 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.Clear();
     Console.WriteLine("**********************************************");
-    Console.WriteLine("*************** Název programu ***************");
+    Console.WriteLine("*************** Vykreslení obdelníku ***************");
     Console.WriteLine("**********************************************");
     Console.WriteLine("************** Jan Vébr **********************");
     Console.WriteLine("**********************************************");
@@ -33,13 +33,30 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.WriteLine("==================================");
     // Výpis zadaných hodnot do jednoho řádku
-    Console.WriteLine($"První hodnota: {aaa}; Další hodnota: {bbb}");
+    Console.WriteLine($"Vyska obdelníku bude {vyska} a šířka {sirka}");
     Console.WriteLine("==================================");
     Console.WriteLine();
 
     // Jádro konkrétního algortimu 
     
-
+ for (int i = 1; i <= vyska; i++)
+    {
+         if(i % 2 == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+        }
+        for (int j = 1; j <= sirka; j++)
+        {
+            Console.Write("* ");
+             System.Threading.Thread.Sleep(System.TimeSpan.FromMilliseconds(100)); 
+        }
+        Console.WriteLine();
+    }
+     Console.ResetColor();
     // Konec jádra konkrétního algoritmu
 
 
