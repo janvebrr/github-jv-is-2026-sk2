@@ -40,9 +40,48 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.WriteLine();
 
-    // Jádro konkrétního algortimu 
-    
+    int kladnecisla = 0;
+    int zapornecisla = 0;
+    int nulove = 0;
+    int sude = 0;
+    int liche = 0;
 
+
+
+    // Jádro konkrétního algortimu 
+    int[] myRandNumbs = new int[n];
+    Random myRandNumb = new Random();
+    Console.WriteLine("Vygenerovaná pseudonáhodná čísla: ");
+    for(int i = 0; i < myRandNumbs.Length; i++)
+    {
+        myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
+        Console.Write($"{myRandNumbs[i]}; ");
+          if(myRandNumbs[i] < 0)
+          {
+            zapornecisla++;
+          }
+        else if(myRandNumbs[i] > 0)
+        {
+            kladnecisla++;
+        }
+        else
+        {
+            nulove++;    
+        }    
+        if (myRandNumbs[i] % 2 == 0)
+        sude ++;
+        else 
+        liche++;
+    }
+    Console.WriteLine();
+    Console.WriteLine("=============================");
+    Console.WriteLine($"Počet záporných čísel: {zapornecisla}");
+    Console.WriteLine($"Počet kladných čísel: {kladnecisla}");
+    Console.WriteLine($"Počet nul: {nulove}");
+    Console.WriteLine("=============================");
+    Console.WriteLine($"Počet sudých čísel: {sude}");
+    Console.WriteLine($"Počet lichých čísel {liche}");
+    Console.WriteLine("=============================");
     // Konec jádra konkrétního algoritmu
 
 
