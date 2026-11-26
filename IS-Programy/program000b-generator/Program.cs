@@ -40,6 +40,22 @@ while(again.ToLower() == "a" )
     Console.WriteLine();
     Console.WriteLine();
 
+
+    // Deklarace a alokace pole v paměti
+    int[] myRandNumbs = new int[n];
+
+    // Inicializace generátoru nahodných čísel
+    Random myRandNumb = new Random();
+    // Random myRandNumb = new Random(50); 
+
+    // Generování náhodných čísel a jejich uložení do pole
+    Console.WriteLine("Vygenerovaná pseudonáhodná čísla: ");
+    for(int i = 0; i < myRandNumbs.Length; i++)
+    {
+        myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
+        Console.Write($"{myRandNumbs[i]}; ");
+    }
+
     // Jádro konkrétního algortimu 
     
 
