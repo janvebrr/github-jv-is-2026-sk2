@@ -56,8 +56,67 @@ while(again.ToLower() == "a" )
     }
 
     // Jádro konkrétního algortimu 
-    
+    int min = myRandNumbs[0];
+    int max = myRandNumbs[0];
+    int posMax= 0;
+    int posMin = 0;
 
+    for (int i = 1; i < n; i++)
+    {
+        if(myRandNumbs[i] > max)
+        {
+            max = myRandNumbs[i];
+            posMax = i;
+        }
+
+        if(myRandNumbs[i] < min)
+        {
+            min = myRandNumbs[i];
+            posMin = i;
+        }
+    
+    }
+    Console.WriteLine();
+    Console.WriteLine("=============================");
+    Console.WriteLine($"Maximum: {max}");
+    Console.WriteLine($"Pozice prvního maxima: {posMax}");
+    Console.WriteLine($"Minimum: {min}");
+    Console.WriteLine($"Pozice prvního minima: {posMin}");
+    Console.WriteLine("=============================");
+
+    if (max >= 3)
+    {
+        for(int i = 0; i < max; i++)
+        {
+            int spaces = 0; 
+            int stars = 0;
+            if(i < max/2)
+            {
+                spaces = i;
+                stars = max - (2 * i);
+            }
+        
+            else
+            {
+                //za domácí úkol
+            }
+            for(int sp = 0; sp < spaces; sp++)
+            {
+                Console.Write(" ");
+            }
+            for(int st = 0; st < stars; st++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        } 
+
+    }
+    else
+    {
+    Console.WriteLine("Maaximum je menší než 3, Hodiny se nevypíšou");
+    }
     // Konec jádra konkrétního algoritmu
 
 
